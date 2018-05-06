@@ -1,0 +1,71 @@
+/* CSS Document */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 60px;
+  color: #fff;
+  line-height: 60px;
+  padding: 0px 20px;
+  border-bottom: 1px solid #e5e5e5; }
+  #header .zhang {
+    background-color: #fff;
+    color: #01C008;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-right: 10px;
+    font-weight: 700; }
+  #header small {
+    opacity: 0.65; }
+
+#page {
+  position: fixed;
+  top: 0;
+  left: 360px;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  border-left: 1px solid #e5e5e5; }
+  #page .header {
+    position: relative;
+    background-color: #f1f1f1;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5; }
+    #page .header .icon {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      z-index: 10;
+      width: 36px;
+      height: 36px;
+      font-style: normal;
+      line-height: 36px;
+      color: #fff;
+      text-align: center;
+      background-color: #01C008;
+      border-radius: 18px; }
+    #page .header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 68px;
+      line-height: 60px; }
+    #page .header button {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      padding: 5px;
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 700;
+      color: #666; }
+  #page .main {
+    position: absolute;
+    top: 61px;
+    bottom: 5px;
+    width: 100%; }
+    #page .main iframe {
+      width: 100%;
+      height: 100%;
+      border: none; }
