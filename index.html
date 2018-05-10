@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>前端学习案例</title>
-<script src="./js/jquery-3.2.1.min.js" ></script>
 <link href="./css/common.css" rel="stylesheet" />
 <link href="./css/font-awesome.min.css" rel="stylesheet" />
 <link href="./index.css" rel="stylesheet" />
+<script src="./js/jquery-3.2.1.min.js" ></script>
+<script src="./index.js" ></script>
 </head>
 
 <body>
@@ -14,10 +15,10 @@
 	<span class="zhang">张</span>
 	<small>V1.0.0 前端学习案例整理</small>
 </header>
-<div id="page">
+<div id="main" data-accent="primary">
 	<div class="header">
 		<i class="icon fa fa-heart"></i>
-		<h2>介绍</h2>
+		<h2>前端案例</h2>
 		<button>作者：张 李 岗</button>
 	</div>
 	<div class="main">
@@ -26,15 +27,30 @@
 </div>
 
 <div id="navbar">
-	<div class="row" data-accent="primary">
+	<div class="row active" data-accent="primary">
 		<div class="header">
-			<i class="icon fa fa-book"></i>
-			<span>基础</span>
+			<i class="icon fa fa-heart"></i>
+			<span>前端案例</span>
 		</div>
 		<div class="body">
-			<ul>
-				<li>张李岗</li>
-				<li>螉杀杀杀</li>
+			<ul data-icon="fa-heart" data-title="前端案例" data-accent="primary">
+				<li class="active"><a href="javascript:;" data-url="./flex/sieves/sieves.html">flex筛子</a></li>
+				<li><a href="javascript:;" data-url="./flex/sieves/sieves.html">张李岗</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" data-accent="red">
+		<div class="header">
+			<i class="icon fa fa-book"></i>
+			<span>知识</span>
+		</div>
+		<div class="body">
+			<ul data-icon="fa-book" data-title="知识" data-accent="red">
+				<li><a href="javascript:;">张李岗</a></li>
+				<li><a href="javascript:;">螉杀杀杀</a></li>
+				<li><a href="javascript:;">螉杀杀杀</a></li>
+				<li><a href="javascript:;">螉杀杀杀</a></li>
+				<li><a href="javascript:;">螉杀杀杀</a></li>
 			</ul>
 		</div>
 	</div>

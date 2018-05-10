@@ -1,0 +1,85 @@
+.rows{
+	.body{
+		display: flex;
+		flex-direction: row;
+	}
+}
+.first-face{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+}
+.second-face{
+	display: flex;
+	justify-content: space-between;
+	.pip:nth-of-type(2){
+		align-self: flex-end;
+	}
+}
+.third-face{
+	display: flex;
+	justify-content: space-between;
+	.pip:nth-of-type(2){
+		align-self: center;
+	}
+	.pip:nth-of-type(3){
+		align-self: flex-end;
+	}
+	
+}
+.fourth-face{
+	display: flex;
+	justify-content: space-between;
+	.column{
+		display: flex;
+  		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.fifth-face{
+	display: flex;
+	justify-content: space-between;
+	.column{
+		display: flex;
+  		flex-direction: column;
+		justify-content: space-between;
+	}
+	.column:nth-of-type(2){
+		justify-content: center;
+	}
+}
+.sixth-face{
+	display: flex;
+	justify-content: space-between;
+	.column{
+		display: flex;
+  		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+[class$="face"]{
+	width: 107px;
+	height: 107px;
+	margin: 16px;
+  	padding: 4px;
+	background: #e7e7e7;
+	border-radius: 10%;
+	box-shadow: 
+		0 5px white inset,
+		-5px 0 #d7d7d7 inset,
+		0 -5px #bbb inset,
+		5px 0 #d7d7d7 inset;
+}
+.pip{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #333;
+	margin: 4px;
+	box-shadow: 
+		0 3px #111 inset,
+		0 -3px #555 inset;
+}

@@ -25,7 +25,7 @@
 	}
 }
 
-#page{
+#main{
 	position: fixed;
 	top: 0;
 	left: 360px;
@@ -69,6 +69,31 @@
 			color: #666;
 		}
 	}
+	&[data-accent="primary"]{
+		.icon{
+			background-color: $color-primary;
+		}
+	}
+	&[data-accent="blue"]{
+		.icon{
+			background-color: $color-blue;
+		}
+	}
+	&[data-accent="red"]{
+		.icon{
+			background-color: $color-red;
+		}
+	}
+	&[data-accent="green"]{
+		.icon{
+			background-color: $color-green;
+		}
+	}
+	&[data-accent="brown"]{
+		.icon{
+			background-color: $color-brown;
+		}
+	}
 	.main{
 		position: absolute;
 		top: 61px;
@@ -92,18 +117,72 @@
 	.row{
 		padding: 2px;
 		transition: box-shadow 0.3s ease;
+		margin-bottom: 5px;
 	}
 	.row[data-accent="primary"]{
-		&:hover{
+		&.active, &:hover{
 			border: 1px solid $color-primary;
 			box-shadow: 0px 0px 5px $color-primary;
 		}
-		&>.header>.icon, &>.header:hover{
+		&>.header>.icon, &.active>.header, &>.header:hover{
 			color: $color-primary;
 		}
-		&>.header:hover>.icon{
+		&.active>.header>.icon, &>.header:hover>.icon{
 			color: #fff;
 			background-color: $color-primary;
+		}
+		&.active>.body>ul>li.active>a, &>.body>ul>li:hover>a{
+			color: $color-primary;
+		}
+		&.active>.body>ul>li.active>a:after, &>.body>ul>li:hover>a:after{
+			border-color: $color-primary;
+		}
+		&.active>.body>ul>li.active>a:before, &>.body>ul>li:hover>a:before{
+			background-color: $color-primary;
+		}
+	}
+	.row[data-accent="blue"]{
+		&.active, &:hover{
+			border: 1px solid $color-blue;
+			box-shadow: 0px 0px 5px $color-blue;
+		}
+		&>.header>.icon, &.active>.header, &>.header:hover{
+			color: $color-blue;
+		}
+		&.active>.header>.icon, &>.header:hover>.icon{
+			color: #fff;
+			background-color: $color-blue;
+		}
+		&.active>.body>ul>li.active>a, &>.body>ul>li:hover>a{
+			color: $color-blue;
+		}
+		&.active>.body>ul>li.active>a:after, &>.body>ul>li:hover>a:after{
+			border-color: $color-blue;
+		}
+		&.active>.body>ul>li.active>a:before, &>.body>ul>li:hover>a:before{
+			background-color: $color-blue;
+		}
+	}
+	.row[data-accent="red"]{
+		&.active, &:hover{
+			border: 1px solid $color-red;
+			box-shadow: 0px 0px 5px $color-red;
+		}
+		&>.header>.icon, &.active>.header, &>.header:hover{
+			color: $color-red;
+		}
+		&.active>.header>.icon, &>.header:hover>.icon{
+			color: #fff;
+			background-color: $color-red;
+		}
+		&.active>.body>ul>li.active>a, &>.body>ul>li:hover>a{
+			color: $color-red;
+		}
+		&.active>.body>ul>li.active>a:after, &>.body>ul>li:hover>a:after{
+			border-color: $color-red;
+		}
+		&.active>.body>ul>li.active>a:before, &>.body>ul>li:hover>a:before{
+			background-color: $color-red;
 		}
 	}
 	.header{
@@ -123,6 +202,8 @@
 		}
 	}
 	.body{
+		padding-bottom: 15px;
+		display: none;
 		>ul{
 			position: relative;
 			padding-left: 15px;
@@ -130,7 +211,7 @@
 				position: absolute;
 				top: -1px;
 				left: 23px;
-				bottom: 0px;
+				bottom: 8px;
 				display: block;
 				content: ' ';
 				border-left: 1px dotted #e5e5e5;
@@ -139,16 +220,35 @@
 				position: relative;
 				padding-left: 35px;
 				font-size: 12px;
-				&:after{
+				padding-top: 15px;
+				&>a{
+					color:#5a5a5a;
+				}
+				&>a:before{
 					position: absolute;
-					top: 5px;
-					left: 0px;
+					content: ' ';
+					width: 8px;
+					height: 8px;
+					top: 21px;
+					left: 4px;
+					background: #e5e5e5;
+					border-radius: 4px;
+				}
+				&>a:after{
+					position: absolute;
+					top: 24px;
+					left: 8px;
 					width: 20px;
 					display: block;
 					content: ' ';
 					border-bottom: 1px dotted #e5e5e5;
 				}
 			}
+		}
+	}
+	.active{
+		.body{
+			display: block;
 		}
 	}
 	

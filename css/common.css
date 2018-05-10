@@ -257,3 +257,153 @@ html {
 
 .fr {
   float: right; }
+
+.container {
+  margin: 0 auto 0 10px; }
+  .container .page-header {
+    padding: 0px 0px 10px 20px;
+    margin: 20px 0px 20px 27px;
+    border-bottom: 4px double #f1f1f1;
+    position: relative; }
+    .container .page-header button {
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 10;
+      position: absolute;
+      top: 5px;
+      left: -10px; }
+      .container .page-header button:after {
+        top: 10px;
+        width: 11px;
+        height: 1px;
+        background-color: #ddd;
+        content: " ";
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        transition: background-color ease; }
+      .container .page-header button:hover {
+        border-color: #01C008; }
+        .container .page-header button:hover:before, .container .page-header button:hover:after {
+          background-color: #01C008; }
+    .container .page-header:before {
+      display: table;
+      content: " "; }
+    .container .page-header:after {
+      display: table;
+      content: " ";
+      clear: both; }
+    .container .page-header h2 {
+      float: left;
+      font-size: 16px;
+      font-weight: 700; }
+    .container .page-header .cubes {
+      padding: 5px 10px;
+      background-color: #e5e5e5;
+      margin-right: 10px;
+      color: #01C008; }
+  .container .page-body {
+    position: relative;
+    margin-left: 27px;
+    padding: 0px 0px 10px 20px; }
+    .container .page-body:before {
+      border-left: 1px dotted #e5e5e5;
+      position: absolute;
+      top: -86px;
+      left: 0px;
+      bottom: 0px;
+      content: " "; }
+    .container .page-body section {
+      position: relative; }
+      .container .page-body section:before {
+        border-left: 1px dotted #e5e5e5;
+        position: absolute;
+        top: 13px;
+        left: -20px;
+        bottom: 0px;
+        content: " ";
+        transition: border-color ease; }
+      .container .page-body section:hover:before {
+        border-color: #01C008; }
+      .container .page-body section:hover header:before {
+        border-color: #01C008; }
+      .container .page-body section:hover header:after {
+        background-color: #01C008; }
+      .container .page-body section:hover header h3 {
+        color: #01C008; }
+        .container .page-body section:hover header h3:after {
+          background-color: #fff; }
+      .container .page-body section p {
+        font-size: 12px;
+        color: #5a5a5a; }
+      .container .page-body section header {
+        cursor: pointer;
+        padding-bottom: 10px; }
+        .container .page-body section header:before {
+          border-bottom: 1px dotted #e5e5e5;
+          position: absolute;
+          top: 13px;
+          left: -12px;
+          width: 8px;
+          content: " ";
+          transition: border-color ease; }
+        .container .page-body section header:after {
+          background-color: #f1f1f1;
+          width: 14px;
+          height: 14px;
+          content: " ";
+          position: absolute;
+          top: 7px;
+          left: -27px;
+          border-radius: 50%;
+          transition: background-color ease; }
+        .container .page-body section header h3 {
+          font-size: 14px; }
+          .container .page-body section header h3:after {
+            background-color: #f1f1f1;
+            width: 7px;
+            height: 1px;
+            content: " ";
+            position: absolute;
+            top: 13px;
+            left: -23px;
+            z-index: 10;
+            transition: background-color ease; }
+      .container .page-body section.page-body-closed:before {
+        bottom: 17px; }
+      .container .page-body section.page-body-closed header h3:before {
+        position: absolute;
+        width: 1px;
+        height: 7px;
+        content: " ";
+        top: 10px;
+        left: -20px;
+        z-index: 10;
+        background-color: #e5e5e5; }
+      .container .page-body section.page-body-closed article {
+        display: none; }
+
+.page-closed .page-header button:before {
+  position: absolute;
+  width: 1px;
+  height: 11px;
+  content: " ";
+  top: 3px;
+  left: 9px;
+  background-color: #e5e5e5; }
+.page-closed .page-body section:before {
+  bottom: 17px; }
+.page-closed .page-body section header h3:before {
+  position: absolute;
+  width: 1px;
+  height: 7px;
+  content: " ";
+  top: 10px;
+  left: -20px;
+  z-index: 10;
+  background-color: #e5e5e5; }
+.page-closed .page-body section article {
+  display: none; }
